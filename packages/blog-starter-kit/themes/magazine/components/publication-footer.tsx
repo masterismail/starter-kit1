@@ -3,7 +3,6 @@ import { Container } from './container';
 import { useAppContext } from './contexts/appContext';
 import { SocialLinks } from './social-links';
 import PublicationSocialLinks from './publication-social-links';
-
 export const PublicationFooter = () => {
 	const { publication } = useAppContext();
 	const PUBLICATION_LOGO = publication.preferences.logo;
@@ -26,8 +25,8 @@ export const PublicationFooter = () => {
 					</p>
 				)}
 				<div className="flex flex-col items-center">
-				<div className="grid w-full grid-cols-3 gap-5 md:grid-cols-6 lg:grid-cols-5">
-					<div className="col-span-1 grid grid-cols-4 gap-5 md:col-span-4 lg:col-span-3">
+				  <div className="grid w-full grid-cols-3 gap-5 md:grid-cols-6 lg:grid-cols-6">
+                    <div className="col-span-1 grid grid-cols-6 gap-5 md:col-span-4 lg:col-span-6">
 						<div className="col-span-full md:col-span-2 lg:col-span-1">
 						 <p className="mb-2 font-semibold text-slate-600 dark:text-neutral-200">Socials</p>
 						   <ul className="flex flex-col gap-1 text-slate-700 dark:text-neutral-300">
@@ -99,7 +98,7 @@ export const PublicationFooter = () => {
 								</li>
 								<li>
 									<a href="#" className="hover:underline">
-										Editor's Choice
+										Editor Choice
 									</a>
 								</li>
 								<li>
@@ -160,24 +159,20 @@ export const PublicationFooter = () => {
 							</ul>
 						</div>
 					</div>
-					<div className="col-span-2 flex flex-col items-start gap-5 text-left text-slate-600 dark:text-neutral-300 md:text-left">
-					<div className='content'></div>
-						
-						<p>&copy; 2023 Company Inc.    
-						
-						 <p>  </p>
-							
-							<a href="#" className="hover:underline">
-								Privacy Policy
-							</a>{' '}
-							·{' '}
-							<a href="#" className="hover:underline">
-								Terms
-							</a>
-						</p>	
 				</div>
 				</div>
-				</div>	
+				<div className="flex">				
+				<div className="col-span-2 flex flex-col items-start gap-5 text-left text-slate-600 dark:text-neutral-300 md:text-left">
+				<p>  </p>
+                <p>&copy; 2023 Company Inc.</p>
+                </div>
+				</div>
+                <div className="col-span-2 flex flex-col items-start gap-5 text-left text-slate-600 dark:text-neutral-300 md:text-left">
+                <a href="#" className="hover:underline">Privacy Policy</a>
+				</div>
+				<div className="col-span-2 flex flex-col items-start gap-5 text-left text-slate-600 dark:text-neutral-300 md:text-left">
+                 <a href="#" className="hover:underline">Terms</a>
+				</div> 
 			</Container>
 		</footer>
 	);
